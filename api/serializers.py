@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Telefon
+from .models import Telefon, Mashina
 
 
 class TelefonSeralizer(ModelSerializer):
@@ -7,3 +7,10 @@ class TelefonSeralizer(ModelSerializer):
     class Meta:
         model = Telefon
         fields = ["id", "name"]
+
+
+class MashinaSeralizer(ModelSerializer):
+
+    class Meta:
+        model = Mashina
+        fields = "__all__"

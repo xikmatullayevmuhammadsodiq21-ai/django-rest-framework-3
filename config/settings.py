@@ -42,13 +42,13 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    "django.middleware.security.SecurityMiddleware", # noqa
-    "django.contrib.sessions.middleware.SessionMiddleware", # noqa
-    "django.middleware.common.CommonMiddleware", # noqa
-    "django.middleware.csrf.CsrfViewMiddleware", # noqa
-    "django.contrib.auth.middleware.AuthenticationMiddleware", # noqa
-    "django.contrib.messages.middleware.MessageMiddleware", # noqa
-    "django.middleware.clickjacking.XFrameOptionsMiddleware", # noqa
+    "django.middleware.security.SecurityMiddleware",  # noqa
+    "django.contrib.sessions.middleware.SessionMiddleware",  # noqa
+    "django.middleware.common.CommonMiddleware",  # noqa
+    "django.middleware.csrf.CsrfViewMiddleware",  # noqa
+    "django.contrib.auth.middleware.AuthenticationMiddleware",  # noqa
+    "django.contrib.messages.middleware.MessageMiddleware",  # noqa
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",  # noqa
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "config.wsgi.application" 
+WSGI_APPLICATION = "config.wsgi.application"
 
 
 # Database
@@ -78,8 +78,8 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
-    } 
-} 
+    }
+}
 
 
 # Password validation
@@ -87,16 +87,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator", # noqa
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator", # noqa
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator", # noqa
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa
     },
     {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator", # noqa
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa
     },
 ]
 

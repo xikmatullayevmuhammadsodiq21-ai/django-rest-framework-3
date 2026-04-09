@@ -1,20 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render # noqa
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
+
 # Create your views here.
 from .models import Telefon
-from . serializers import TelefonSeralizer
+from .serializers import TelefonSeralizer
 
 
 class MyAPi(APIView):
     def get(self, request):
-    
+
         telefon = Telefon.objects.all()
         data = TelefonSeralizer(telefon, many=True).data
-           
+
         return Response(data, status=status.HTTP_200_OK)
-    
 
     def post(self, request):
         ser = TelefonSeralizer(data=request.data)
@@ -22,7 +22,7 @@ class MyAPi(APIView):
             ser.save()
             name = ser.name
         msg = f"{name} telefon qoshildi."
-        return Response({"massage":msg})
+        return Response({"massage": msg})
 
     def put(self, request):
         try:
@@ -37,5 +37,3 @@ class MyAPi(APIView):
             return Response("kechirasiz telefon topilmadi.")
         except Exception as e:
             return Response("Nomalum xatolik: " + e)
-    
-        

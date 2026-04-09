@@ -6,4 +6,4 @@ class TelefonSeralizer(ModelSerializer):
 
     class Meta:
         model = Telefon
-        fields = ['id', 'name']
+        fields = ["id", "name"]
